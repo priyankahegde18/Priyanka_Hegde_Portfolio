@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyanka Dattatreya Hegde | Data Analyst &amp; Enterprise Data Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ivory: '#FAF9F6',
+            navy: {
+              900: '#091A2B',
+              800: '#0F2942',
+              700: '#1A3B5C',
+              50: '#F0F4F8',
+            },
+            gold: {
+              600: '#9A6F08',
+              500: '#B8860B',
+              400: '#C59B27',
+              100: '#FBF6E9',
+              50: '#FDFBF4',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #334155;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    /* Custom Classic Range Sliders */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: #E2E8F0;
+      border-radius: 999px;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0F2942;
+      border: 2.5px solid #C59B27;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+      transition: transform 0.15s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.12);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0F2942;
+      border: 2.5px solid #C59B27;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-100 selection:text-navy-800">
+
+  <!-- Toast Notification -->
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-xl bg-navy-800 text-white text-sm font-medium shadow-xl border border-gold-400/50 transition-all">
+    <svg class="w-4 h-4 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- Sticky Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-ivory/95 backdrop-blur-md border-b border-slate-200/90">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <!-- Monogram Logo -->
+      <a href="#overview" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-navy-800 border border-gold-400 flex items-center justify-center shadow-sm group-hover:bg-navy-900 transition-colors">
+          <span class="font-serif font-bold text-base tracking-wider text-gold-400">PH</span>
+        </div>
+        <div class="hidden sm:block">
+          <span class="block font-serif font-bold text-navy-800 text-sm tracking-wide leading-tight">Priyanka D. Hegde</span>
+          <span class="block text-[11px] uppercase tracking-widest text-gold-600 font-medium">Data &amp; Cloud Analytics</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#overview" class="hover:text-navy-800 transition-colors">Overview</a>
+        <a href="#competencies" class="hover:text-navy-800 transition-colors">Competencies</a>
+        <a href="#experience" class="hover:text-navy-800 transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-navy-800 transition-colors">Enterprise &amp; ML Projects</a>
+        <a href="#credentials" class="hover:text-navy-800 transition-colors">Certifications</a>
+        <a href="#contact" class="hover:text-navy-800 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Quick Copy Email Button & Mobile Menu Toggle -->
+      <div class="flex items-center gap-2.5">
+        <button type="button" onclick="copyText('priyankahegde182000@gmail.com', 'Email address copied to clipboard')" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-white text-xs sm:text-sm font-medium border border-gold-400/40 shadow-sm transition-all cursor-pointer">
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>Copy Email</span>
+        </button>
+
+        <button type="button" id="mobile-menu-btn" aria-label="Toggle Navigation" class="md:hidden p-2 rounded-lg border border-slate-200 bg-white text-navy-800 hover:bg-slate-50 cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-medium text-slate-700">
+      <a href="#overview" class="block py-2 px-3 rounded-lg hover:bg-ivory hover:text-navy-800">Overview</a>
+      <a href="#competencies" class="block py-2 px-3 rounded-lg hover:bg-ivory hover:text-navy-800">Competencies</a>
+      <a href="#experience" class="block py-2 px-3 rounded-lg hover:bg-ivory hover:text-navy-800">Experience</a>
+      <a href="#projects" class="block py-2 px-3 rounded-lg hover:bg-ivory hover:text-navy-800">Enterprise &amp; ML Projects</a>
+      <a href="#credentials" class="block py-2 px-3 rounded-lg hover:bg-ivory hover:text-navy-800">Certifications</a>
+      <a href="#contact" class="block py-2 px-3 rounded-lg hover:bg-ivory hover:text-navy-800">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- 1. Hero / Executive Summary Section -->
+    <section id="overview" class="pt-12 pb-14 sm:pt-16 sm:pb-20 border-b border-slate-200">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden">
+        <!-- Subtle Top Gold Accent Bar -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-navy-800 via-gold-500 to-navy-800"></div>
+
+        <div class="max-w-4xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-50 border border-gold-400/40 text-xs font-semibold tracking-wider uppercase text-gold-600 mb-5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>
+            Databricks Certified Data Engineer Professional
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-800 tracking-tight leading-tight">
+            PRIYANKA DATTATREYA HEGDE
+          </h1>
+
+          <p class="mt-3 text-base sm:text-xl font-semibold text-gold-600 tracking-wide">
+            Data Analyst &nbsp;|&nbsp; Data Engineer &nbsp;|&nbsp; Enterprise Software Engineer
+          </p>
+
+          <!-- Location & Contact Bar -->
+          <div class="mt-5 pt-5 border-t border-slate-100 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs sm:text-sm text-slate-600">
+            <span class="inline-flex items-center gap-1.5 font-medium text-navy-800">
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Bangalore, India
+            </span>
+            <span class="text-slate-300 hidden sm:inline">•</span>
+            <button type="button" onclick="copyText('+91-8618205353', 'Phone number copied to clipboard')" class="inline-flex items-center gap-1.5 hover:text-navy-800 transition-colors cursor-pointer">
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              +91-8618205353
+            </button>
+            <span class="text-slate-300 hidden sm:inline">•</span>
+            <button type="button" onclick="copyText('priyankahegde182000@gmail.com', 'Email copied to clipboard')" class="inline-flex items-center gap-1.5 hover:text-navy-800 transition-colors cursor-pointer">
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              priyankahegde182000@gmail.com
+            </button>
+            <span class="text-slate-300 hidden sm:inline">•</span>
+            <a href="https://linkedin.com/in/priyanka-hegde-3b4819208" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-navy-800 font-medium hover:text-gold-600 transition-colors">
+              <svg class="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              linkedin.com/in/priyanka-hegde-3b4819208
+            </a>
+          </div>
+
+          <!-- Executive Summary -->
+          <p class="mt-6 text-sm sm:text-base text-slate-600 leading-relaxed">
+            Impact-driven Data Analyst and Enterprise Software Engineer with <strong class="font-semibold text-navy-800">2.1+ years of enterprise IT experience at Cognizant</strong>, specializing in delivering revenue-protecting data analytics, multi-layer Databricks lakehouse architectures, Azure Data Factory pipelines, C#/.NET Core enterprise systems, and intelligent process automation for Fortune-500 US clients (<strong class="font-semibold text-navy-800">UPS</strong> and <strong class="font-semibold text-navy-800">Cargill</strong>). Equipped with four industry cloud and AI certifications, translating complex operational datasets into executive reporting and measurable operational efficiency.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="mt-7 flex flex-wrap items-center gap-3.5">
+            <a href="#projects" class="px-5 py-2.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-white text-sm font-medium shadow-sm transition-all">
+              Explore Enterprise &amp; ML Case Studies
+            </a>
+            <a href="#experience" class="px-5 py-2.5 rounded-xl bg-ivory hover:bg-gold-50 text-navy-800 text-sm font-medium border border-slate-300 hover:border-gold-400 transition-all">
+              View Career Timeline
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Key Impact Metric Cards -->
+        <div class="mt-10 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div class="p-5 rounded-xl bg-ivory border border-slate-200/90 hover:border-gold-400 transition-colors">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-navy-800">40%+</div>
+            <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-600">Query Latency Reduction</div>
+            <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Databricks Lakehouse &amp; SQL Server query optimization</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-ivory border border-slate-200/90 hover:border-gold-400 transition-colors">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-navy-800">100%</div>
+            <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-600">Error Elimination</div>
+            <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">End-to-end UI &amp; Python workflow automation</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-ivory border border-slate-200/90 hover:border-gold-400 transition-colors">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-navy-800">99.9%+</div>
+            <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-600">Production SLA Uptime</div>
+            <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Mission-critical UPS &amp; Cargill enterprise systems</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-ivory border border-slate-200/90 hover:border-gold-400 transition-colors">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-navy-800">4x Certified</div>
+            <div class="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-600">Cloud &amp; AI Credentials</div>
+            <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Databricks, Snowflake, AWS &amp; GitHub Copilot</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Core Competencies & Technical Ecosystem -->
+    <section id="competencies" class="py-14 sm:py-18 border-b border-slate-200">
+      <div class="mb-9">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-600">Technical Architecture &amp; Capabilities</span>
+        <h2 class="mt-1.5 font-serif text-2xl sm:text-3xl font-bold text-navy-800">Core Competencies &amp; Ecosystem</h2>
+        <p class="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl">
+          An integrated blend of enterprise data engineering, statistical modeling, cloud lakehouse governance, and operational business analysis.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Pillar 1 -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-gold-400/80 transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-navy-50 border border-navy-800/15 flex items-center justify-center text-navy-800">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-navy-800">Data Engineering &amp; Warehousing</h3>
+              <span class="text-xs text-slate-500">Lakehouse Modeling &amp; Relational Systems</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Databricks (Spark SQL &amp; Delta Lake)</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Unity Catalog &amp; Auto Loader</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Databricks Workflows</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Snowflake</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">SQL Server &amp; T-SQL</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">MySQL</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Bronze / Silver / Gold Layers</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-gold-400/80 transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-gold-50 border border-gold-400/30 flex items-center justify-center text-gold-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-navy-800">Analytics, BI &amp; Data Science</h3>
+              <span class="text-xs text-slate-500">Statistical Modeling &amp; Executive Visualization</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Python &amp; PySpark</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Advanced SQL (CTEs &amp; Window Functions)</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Pandas &amp; NumPy</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Scikit-learn (Regression &amp; ML)</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Power BI</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Tableau</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Advanced Excel</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-gold-400/80 transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-navy-50 border border-navy-800/15 flex items-center justify-center text-navy-800">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-navy-800">Cloud, ETL &amp; Enterprise Engineering</h3>
+              <span class="text-xs text-slate-500">Pipeline Orchestration &amp; .NET Development</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Azure Data Factory (ADF)</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Amazon S3 (AWS)</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">C# &amp; ASP.NET / .NET Core</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Power Automate</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">UI Automation</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Agile DevOps</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-gold-400/80 transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-gold-50 border border-gold-400/30 flex items-center justify-center text-gold-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-navy-800">Business &amp; Operational Analysis</h3>
+              <span class="text-xs text-slate-500">Governance, Reconciliation &amp; Client Delivery</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">Data Validation &amp; Reconciliation</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-navy-50 text-navy-800 border border-navy-800/10">KPI &amp; SLA Tracking</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Requirements Gathering</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Process Mapping</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Root-Cause Analysis</span>
+            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-ivory text-slate-700 border border-slate-200">Stakeholder Reporting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Professional Experience Timeline -->
+    <section id="experience" class="py-14 sm:py-18 border-b border-slate-200">
+      <div class="mb-10">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-600">Career Progression</span>
+        <h2 class="mt-1.5 font-serif text-2xl sm:text-3xl font-bold text-navy-800">Professional Experience</h2>
+      </div>
+
+      <div class="relative border-l-2 border-gold-400/60 ml-3 sm:ml-4 space-y-10">
+        <!-- Role 1: Cognizant -->
+        <div class="relative pl-7 sm:pl-9">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-navy-800 border-2 border-gold-400"></span>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-4 border-b border-slate-100">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-navy-800">Junior Software Engineer / Programmer Analyst</h3>
+                <p class="text-sm font-semibold text-gold-600 mt-0.5">Cognizant &nbsp;•&nbsp; Enterprise Data &amp; Application Operations (UPS &amp; Cargill)</p>
+              </div>
+              <div class="sm:text-right">
+                <span class="inline-block px-3 py-1 rounded-full bg-navy-50 text-navy-800 text-xs font-semibold border border-navy-800/10">Dec 2023 – Present (2.1 Years)</span>
+                <span class="block text-xs text-slate-500 mt-1">Bangalore, India</span>
+              </div>
+            </div>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-600 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">Analytics Dataset &amp; Query Optimization:</strong> Re-engineered legacy T-SQL and SQL Server logic into multi-layer Databricks analytics datasets (Bronze, Silver, and Gold Delta tables) using Spark SQL, PySpark, and Python, reducing data processing latency by 40%+ across US time zones.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">ETL/ELT Governance &amp; Data Reconciliation:</strong> Architected, audited, and maintained end-to-end ETL/ELT pipelines across Azure Data Factory, SQL Server, and cloud storage, enforcing automated validation rules that achieved 99.9%+ data integrity.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">Process &amp; Configuration Automation (Cargill):</strong> Spearheaded end-to-end UI Automation and Python scripting to replace manual configuration workflows, eliminating 100% of human configuration errors and cutting workflow turnaround time by 60%.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">Operational &amp; SLA Analytics (UPS):</strong> Analyzed high-volume logistics and application datasets using SQL and Advanced Excel to map workflows, uncover process bottlenecks, and track SLA KPIs—driving measurable improvements in service throughput.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">Outage Prevention &amp; Cross-Functional Delivery:</strong> Led deep system diagnostics and real-time incident resolution across mission-critical C#/.NET Core applications, maintaining 99.9%+ availability while translating stakeholder requirements into production-ready specifications.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: Exposys Datalabs -->
+        <div class="relative pl-7 sm:pl-9">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-2 border-gold-500"></span>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-4 border-b border-slate-100">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-navy-800">Data Science Intern</h3>
+                <p class="text-sm font-semibold text-gold-600 mt-0.5">Exposys Datalabs &nbsp;•&nbsp; Predictive Financial Modeling &amp; Regression Analytics</p>
+              </div>
+              <div class="sm:text-right">
+                <span class="inline-block px-3 py-1 rounded-full bg-gold-50 text-gold-600 text-xs font-semibold border border-gold-400/30">Nov 2022 – Dec 2022</span>
+                <span class="block text-xs text-slate-500 mt-1">Bangalore, India</span>
+              </div>
+            </div>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-600 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">Startup Profit Prediction &amp; Regression Benchmarking:</strong> Engineered and benchmarked four supervised regression models (Multiple Linear Regression, Support Vector Regression, Decision Tree Regressor, and Random Forest Regressor) across a 50-company financial dataset (R&amp;D Spend, Administration Cost, Marketing Spend, and Profit), isolating R&amp;D investment as the primary revenue driver.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
+                <span><strong class="text-navy-800 font-semibold">Model Validation &amp; Capital Allocation Insights:</strong> Partitioned train/test validation pipelines and evaluated model performance across R², RMSE, MAE, and MSE metrics to select the optimal model (94%+ variance explanation), delivering executive budget-allocation recommendations to maximize net profitability.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Projects & Enterprise Case Studies -->
+    <section id="projects" class="py-14 sm:py-18 border-b border-slate-200">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-9">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-600">Portfolio &amp; Case Studies</span>
+          <h2 class="mt-1.5 font-serif text-2xl sm:text-3xl font-bold text-navy-800">Enterprise &amp; Data Science Engagements</h2>
+          <p class="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl">
+            Production enterprise platforms, automated operational workflows, and predictive financial models delivering measurable business impact.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button type="button" data-filter="all" class="proj-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-navy-800 text-white border border-navy-800 transition-all cursor-pointer">
+            All (7)
+          </button>
+          <button type="button" data-filter="enterprise-cloud" class="proj-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer">
+            Enterprise Cloud &amp; .NET
+          </button>
+          <button type="button" data-filter="datascience" class="proj-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer">
+            Data Science &amp; ML
+          </button>
+          <button type="button" data-filter="fullstack-sql" class="proj-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer">
+            Full-Stack &amp; SQL
+          </button>
+        </div>
+      </div>
+
+      <!-- Case Studies Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+        <!-- Case Study 1: UPS -->
+        <article data-category="enterprise-cloud" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-navy-50 text-navy-800 border border-navy-800/10">Enterprise Cloud &amp; .NET</span>
+              <span class="text-xs font-semibold text-gold-600">99.9%+ Uptime</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              UPS (United Parcel Service) — Enterprise Logistics Data &amp; Backend Systems
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Built, enhanced, and maintained production C#, .NET Core, SQL Server, and Azure Data Factory pipelines supporting US logistics operations at Cognizant. Audited large-scale data workflows in Databricks and led real-time log diagnostics to safeguard 99.9%+ SLA uptime.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">C# &amp; .NET Core</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Databricks</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Azure Data Factory</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">SQL Server</span>
+          </div>
+        </article>
+
+        <!-- Case Study 2: Cargill -->
+        <article data-category="enterprise-cloud" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-navy-50 text-navy-800 border border-navy-800/10">Enterprise Cloud &amp; .NET</span>
+              <span class="text-xs font-semibold text-gold-600">60% Faster • 0 Errors</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              Cargill — Automated Configuration &amp; Application Reliability Suite
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Engineered end-to-end UI Automation and Python workflows at Cognizant to replace repetitive manual configurations across global agricultural supply chain systems—eliminating 100% of human configuration errors and cutting turnaround time by 60%.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">UI Automation</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">C# &amp; .NET Core</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">SQL Server</span>
+          </div>
+        </article>
+
+        <!-- Case Study 3: Startup Profit Prediction -->
+        <article data-category="datascience" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-gold-50 text-gold-600 border border-gold-400/30">Data Science &amp; ML</span>
+              <span class="text-xs font-semibold text-navy-800">94%+ Variance R²</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              Startup Profit Prediction &amp; Capital Allocation Engine
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Benchmarked four regression algorithms (Multiple Linear Regression, Support Vector Regression, Decision Tree, and Random Forest) on 50 startups' R&amp;D, Administration, and Marketing spend at Exposys Datalabs, identifying R&amp;D spend as the primary profit driver.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Pandas &amp; NumPy</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Scikit-learn</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Regression Analytics</span>
+          </div>
+        </article>
+
+        <!-- Case Study 4: Sign Language & Hand Gesture Recognition -->
+        <article data-category="datascience" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-gold-50 text-gold-600 border border-gold-400/30">Data Science &amp; ML</span>
+              <span class="text-xs font-semibold text-navy-800">Computer Vision</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              Sign Language &amp; Hand Gesture Recognition System
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Built a real-time computer vision accessibility solution using Python, OpenCV, Convolutional Neural Networks (CNN), and Java to capture and translate hand gestures into immediate text and speech output.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">OpenCV</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">CNN Deep Learning</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Java</span>
+          </div>
+        </article>
+
+        <!-- Case Study 5: AI Speech Recognition Chatbot -->
+        <article data-category="datascience" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-gold-50 text-gold-600 border border-gold-400/30">Data Science &amp; ML</span>
+              <span class="text-xs font-semibold text-navy-800">Conversational NLP</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              AI Speech Recognition Chatbot
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Designed and trained a conversational intent modeling assistant using Python, LSTM neural networks, and Natural Language Processing (NLP) to automate multi-turn user query resolution and streamline support interactions.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">LSTM Networks</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">NLP</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Speech Processing</span>
+          </div>
+        </article>
+
+        <!-- Case Study 6: RTO Management System -->
+        <article data-category="fullstack-sql" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-navy-50 text-navy-800 border border-navy-800/10">Full-Stack &amp; SQL</span>
+              <span class="text-xs font-semibold text-gold-600">50% Time Reduction</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              RTO Management &amp; Workflow Digitization System
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Engineered a normalized relational database and web application using MySQL, PHP, and XAMPP to digitize Learner's License (LLR) workflows—cutting manual application processing time by 50% and eliminating paperwork bottlenecks.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">MySQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Relational Schema</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">PHP</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">XAMPP</span>
+          </div>
+        </article>
+
+        <!-- Case Study 7: Book Store Inventory Platform -->
+        <article data-category="fullstack-sql" class="project-card flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200 hover:border-gold-400 shadow-sm transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-navy-50 text-navy-800 border border-navy-800/10">Full-Stack &amp; SQL</span>
+              <span class="text-xs font-semibold text-gold-600">Real-Time Tracking</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy-800 leading-snug">
+              Book Store Inventory Platform
+            </h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Architected structured document data models and full CRUD operational workflows using the MERN Stack and MongoDB to enable real-time stock tracking, order lifecycle management, and inventory discrepancy prevention.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs font-medium text-navy-800">
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">MongoDB</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">MERN Stack</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">Data Modeling</span>
+            <span class="px-2.5 py-1 rounded-md bg-ivory border border-slate-200">CRUD Workflows</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Interactive Visual Profit & ROI Estimator Widget -->
+      <div class="mt-10 bg-white rounded-2xl border border-gold-400/50 p-6 sm:p-8 lg:p-10 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Left Explanation & Model Switcher -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-50 border border-gold-400/40 text-xs font-semibold uppercase tracking-wider text-gold-600">
+              Interactive Executive Decision Tool
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-navy-800">
+              Profit &amp; ROI Estimator
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Simulate capital allocation scenarios derived from my 50-startup financial regression study at Exposys Datalabs. Adjust R&amp;D, Administration, and Marketing budgets to compare projected net profit and return ratios across two validated machine learning models.
+            </p>
+
+            <!-- Model Selector Pills -->
+            <div class="pt-2">
+              <span class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Select Predictive Model</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+                <button type="button" id="model-btn-linear" onclick="selectMlModel('linear')" class="flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-semibold bg-navy-800 text-white border border-navy-800 transition-all cursor-pointer">
+                  <span>Multiple Linear Regression</span>
+                  <span class="px-2 py-0.5 rounded bg-gold-500/20 text-gold-400">R² 94.6%</span>
+                </button>
+                <button type="button" id="model-btn-rf" onclick="selectMlModel('rf')" class="flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-semibold bg-ivory text-navy-800 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer">
+                  <span>Random Forest Regressor</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-200/70 text-slate-700">R² 93.8%</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive Sliders & Executive Business Output Cards -->
+          <div class="lg:col-span-7 bg-ivory rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-5">
+            <!-- Sliders -->
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1.5">
+                  <span class="text-navy-800">R&amp;D Investment <span class="text-gold-600 font-normal">(Primary Profit Driver)</span></span>
+                  <span id="rd-val" class="text-navy-800 font-bold">$120,000</span>
+                </div>
+                <input type="range" id="rd-slider" min="0" max="200000" step="5000" value="120000" class="w-full" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1.5">
+                  <span class="text-navy-800">Administration Cost</span>
+                  <span id="admin-val" class="text-slate-700 font-bold">$110,000</span>
+                </div>
+                <input type="range" id="admin-slider" min="50000" max="200000" step="5000" value="110000" class="w-full" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1.5">
+                  <span class="text-navy-800">Marketing Spend</span>
+                  <span id="mkt-val" class="text-slate-700 font-bold">$250,000</span>
+                </div>
+                <input type="range" id="mkt-slider" min="0" max="500000" step="10000" value="250000" class="w-full" />
+              </div>
+            </div>
+
+            <!-- Visual Allocation Progress Bar -->
+            <div class="pt-2">
+              <div class="flex justify-between text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-1.5">
+                <span>Capital Allocation Mix</span>
+                <span id="total-spend-label">Total Outlay: $480,000</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-slate-200 overflow-hidden flex">
+                <div id="bar-rd" class="bg-navy-800 h-full transition-all duration-300" style="width: 25%" title="R&D Spend"></div>
+                <div id="bar-admin" class="bg-slate-400 h-full transition-all duration-300" style="width: 23%" title="Administration Cost"></div>
+                <div id="bar-mkt" class="bg-gold-500 h-full transition-all duration-300" style="width: 52%" title="Marketing Spend"></div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-4 text-[11px] text-slate-600">
+                <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-navy-800"></span>R&amp;D (<span id="pct-rd">25%</span>)</span>
+                <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-slate-400"></span>Admin (<span id="pct-admin">23%</span>)</span>
+                <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-gold-500"></span>Marketing (<span id="pct-mkt">52%</span>)</span>
+              </div>
+            </div>
+
+            <!-- Business Output Cards -->
+            <div class="pt-3 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-white border border-slate-200">
+                <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">Projected Net Profit</span>
+                <span id="predicted-profit" class="mt-1 block font-serif text-2xl sm:text-3xl font-bold text-navy-800">$150,658</span>
+              </div>
+              <div class="p-4 rounded-xl bg-white border border-slate-200">
+                <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">Capital Return Ratio (ROI)</span>
+                <span id="roi-ratio" class="mt-1 block font-serif text-2xl sm:text-3xl font-bold text-gold-600">31.4%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Certifications, Awards & Education Grid -->
+    <section id="credentials" class="py-14 sm:py-18">
+      <div class="mb-10">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-600">Credentials &amp; Academic Background</span>
+        <h2 class="mt-1.5 font-serif text-2xl sm:text-3xl font-bold text-navy-800">Certifications, Recognition &amp; Education</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Column: Certifications (7 cols) -->
+        <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h3 class="font-serif text-xl font-bold text-navy-800 pb-3 border-b border-slate-100">
+            Professional Certifications
+          </h3>
+
+          <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <!-- Highlighted Databricks Cert -->
+            <div class="sm:col-span-2 p-4 rounded-xl bg-navy-800 text-white border border-gold-400/60 flex items-start justify-between gap-3">
+              <div>
+                <span class="inline-block text-[10px] font-semibold uppercase tracking-widest text-gold-400">Flagship Data Engineering Credential</span>
+                <h4 class="font-serif text-base font-bold mt-0.5">Databricks Certified Data Engineer Professional</h4>
+                <p class="text-xs text-slate-300 mt-1">Earned April 2026 &nbsp;•&nbsp; Valid through April 2028</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-md bg-gold-500/20 border border-gold-400/40 text-gold-400 text-xs font-semibold shrink-0">Active</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">Snowflake Certification</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Cloud Data Warehousing &amp; Analytics</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">AWS Certification</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Cloud Infrastructure &amp; Amazon S3 Storage</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">GitHub Copilot Certification</h4>
+              <p class="text-xs text-slate-600 mt-0.5">AI-Assisted Engineering &amp; Productivity</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">JPMorgan Chase &amp; Co.</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Cybersecurity Job Simulation</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">ISEA Certification</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Cyber-Hygiene Practitioner</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">Google Digital Unlocked</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Digital Marketing &amp; Analytics</p>
+            </div>
+
+            <div class="sm:col-span-2 p-3.5 rounded-xl bg-ivory border border-slate-200">
+              <h4 class="text-sm font-bold text-navy-800">NPTEL Online Certification</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Internet of Things (IoT) &amp; Intellectual Property</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Education & Recognition (5 cols) -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <!-- Education Card -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+            <h3 class="font-serif text-xl font-bold text-navy-800 pb-3 border-b border-slate-100">
+              Academic Qualifications
+            </h3>
+
+            <div class="mt-5 space-y-5">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-xs font-semibold text-gold-600">2020 – 2023</span>
+                  <span class="text-xs font-bold text-navy-800 bg-navy-50 px-2.5 py-0.5 rounded">CGPA: 7.37</span>
+                </div>
+                <h4 class="text-sm font-bold text-navy-800 mt-1">B.E. in Information Science and Engineering</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Nitte Meenakshi Institute of Engineering, Bangalore</p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-xs font-semibold text-gold-600">2016 – 2019</span>
+                  <span class="text-xs font-bold text-navy-800 bg-navy-50 px-2.5 py-0.5 rounded">70.42%</span>
+                </div>
+                <h4 class="text-sm font-bold text-navy-800 mt-1">Diploma in Computer Science and Engineering</h4>
+                <p class="text-xs text-slate-600 mt-0.5">M.E.S. R.N. Shetty Polytechnic, Sirsi (Uttara Kannada)</p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-xs font-semibold text-gold-600">2015</span>
+                  <span class="text-xs font-bold text-navy-800 bg-navy-50 px-2.5 py-0.5 rounded">86.57%</span>
+                </div>
+                <h4 class="text-sm font-bold text-navy-800 mt-1">SSLC (Secondary School Leaving Certificate)</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Govt. High School, Isaluru, Sirsi (Uttara Kannada)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recognition Card -->
+          <div class="bg-gold-50 rounded-2xl border border-gold-400/50 p-6 shadow-sm">
+            <div class="flex items-center gap-2.5 text-gold-600 mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+              <span class="text-xs font-bold uppercase tracking-wider">Awards &amp; Recognition</span>
+            </div>
+            <h4 class="font-serif text-lg font-bold text-navy-800">Inspiring Volunteer Award — Cognizant</h4>
+            <p class="mt-1.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Awarded for two consecutive terms in recognition of sustained leadership, community engagement, and measurable social outreach contributions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Executive Footer & Direct Contact Section -->
+  <footer id="contact" class="bg-navy-800 text-white border-t-4 border-gold-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div class="max-w-xl">
+          <span class="text-xs font-semibold uppercase tracking-widest text-gold-400">Executive Contact</span>
+          <h2 class="mt-1.5 font-serif text-2xl sm:text-3xl font-bold text-white">
+            Connect with Priyanka Dattatreya Hegde
+          </h2>
+          <p class="mt-2.5 text-sm text-slate-300 leading-relaxed">
+            Available for Data Analyst, Data Engineer, and Business Analytics opportunities in Bangalore and global remote/US-shift engagements.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button type="button" onclick="copyText('priyankahegde182000@gmail.com', 'Email address copied to clipboard')" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white text-navy-800 hover:bg-gold-50 text-xs sm:text-sm font-semibold shadow-sm transition-all cursor-pointer">
+            <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span>priyankahegde182000@gmail.com</span>
+          </button>
+
+          <button type="button" onclick="copyText('+91-8618205353', 'Phone number copied to clipboard')" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-navy-700 text-white hover:bg-navy-900 border border-slate-600 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
+            <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>+91-8618205353</span>
+          </button>
+
+          <a href="https://linkedin.com/in/priyanka-hegde-3b4819208" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-900 text-xs sm:text-sm font-bold shadow-sm transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-navy-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <span>© 2026 Priyanka Dattatreya Hegde. All rights reserved.</span>
+        <span>Bangalore, Karnataka, India</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Clipboard Copy with Toast Confirmation (iframe-safe fallback)
+    let toastTimeout;
+    function copyText(text, message) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).catch(() => {});
+        }
+      }
+      document.body.removeChild(textArea);
+
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = message;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2800);
+    }
+
+    // Project Category Filtering
+    const filterButtons = document.querySelectorAll('.proj-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(b => {
+          b.className = 'proj-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer';
+        });
+        btn.className = 'proj-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-navy-800 text-white border border-navy-800 transition-all cursor-pointer';
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('hidden');
+            card.classList.add('flex');
+          } else {
+            card.classList.add('hidden');
+            card.classList.remove('flex');
+          }
+        });
+      });
+    });
+
+    // Interactive Profit & ROI Estimator
+    const rdSlider = document.getElementById('rd-slider');
+    const adminSlider = document.getElementById('admin-slider');
+    const mktSlider = document.getElementById('mkt-slider');
+
+    const rdVal = document.getElementById('rd-val');
+    const adminVal = document.getElementById('admin-val');
+    const mktVal = document.getElementById('mkt-val');
+    const predictedProfit = document.getElementById('predicted-profit');
+    const roiRatio = document.getElementById('roi-ratio');
+    const totalSpendLabel = document.getElementById('total-spend-label');
+
+    const barRd = document.getElementById('bar-rd');
+    const barAdmin = document.getElementById('bar-admin');
+    const barMkt = document.getElementById('bar-mkt');
+    const pctRd = document.getElementById('pct-rd');
+    const pctAdmin = document.getElementById('pct-admin');
+    const pctMkt = document.getElementById('pct-mkt');
+
+    let currentMlModel = 'linear';
+
+    function selectMlModel(model) {
+      currentMlModel = model;
+      const btnLinear = document.getElementById('model-btn-linear');
+      const btnRf = document.getElementById('model-btn-rf');
+
+      if (model === 'linear') {
+        btnLinear.className = 'flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-semibold bg-navy-800 text-white border border-navy-800 transition-all cursor-pointer';
+        btnLinear.querySelector('span:last-child').className = 'px-2 py-0.5 rounded bg-gold-500/20 text-gold-400';
+        btnRf.className = 'flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-semibold bg-ivory text-navy-800 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer';
+        btnRf.querySelector('span:last-child').className = 'px-2 py-0.5 rounded bg-slate-200/70 text-slate-700';
+      } else {
+        btnRf.className = 'flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-semibold bg-navy-800 text-white border border-navy-800 transition-all cursor-pointer';
+        btnRf.querySelector('span:last-child').className = 'px-2 py-0.5 rounded bg-gold-500/20 text-gold-400';
+        btnLinear.className = 'flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-semibold bg-ivory text-navy-800 border border-slate-200 hover:border-gold-400 transition-all cursor-pointer';
+        btnLinear.querySelector('span:last-child').className = 'px-2 py-0.5 rounded bg-slate-200/70 text-slate-700';
+      }
+      updateProfitPrediction();
+    }
+
+    function updateProfitPrediction() {
+      const rd = Number(rdSlider.value);
+      const admin = Number(adminSlider.value);
+      const mkt = Number(mktSlider.value);
+
+      rdVal.textContent = '$' + rd.toLocaleString();
+      adminVal.textContent = '$' + admin.toLocaleString();
+      mktVal.textContent = '$' + mkt.toLocaleString();
+
+      let estimate = 0;
+      if (currentMlModel === 'linear') {
+        estimate = Math.max(15000, Math.round(50122 + (0.8057 * rd) - (0.0268 * admin) + (0.0272 * mkt)));
+      } else {
+        const rdTierBonus = rd > 130000 ? 6400 : (rd > 75000 ? 2800 : -1500);
+        estimate = Math.max(18000, Math.round(51800 + (0.782 * rd) - (0.019 * admin) + (0.031 * mkt) + rdTierBonus));
+      }
+
+      const totalSpend = rd + admin + mkt;
+      const roiPct = totalSpend > 0 ? ((estimate / totalSpend) * 100).toFixed(1) : '0.0';
+
+      const rdShare = totalSpend > 0 ? Math.round((rd / totalSpend) * 100) : 0;
+      const adminShare = totalSpend > 0 ? Math.round((admin / totalSpend) * 100) : 0;
+      const mktShare = Math.max(0, 100 - rdShare - adminShare);
+
+      barRd.style.width = rdShare + '%';
+      barAdmin.style.width = adminShare + '%';
+      barMkt.style.width = mktShare + '%';
+
+      pctRd.textContent = rdShare + '%';
+      pctAdmin.textContent = adminShare + '%';
+      pctMkt.textContent = mktShare + '%';
+
+      totalSpendLabel.textContent = 'Total Outlay: $' + totalSpend.toLocaleString();
+      predictedProfit.textContent = '$' + estimate.toLocaleString();
+      roiRatio.textContent = roiPct + '%';
+    }
+
+    rdSlider.addEventListener('input', updateProfitPrediction);
+    adminSlider.addEventListener('input', updateProfitPrediction);
+    mktSlider.addEventListener('input', updateProfitPrediction);
+    updateProfitPrediction();
+  </script>
+</body>
+</html>
